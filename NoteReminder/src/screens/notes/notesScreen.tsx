@@ -1,11 +1,7 @@
 import React from 'react'
 import { View, Button } from 'react-native';
 
-export default class ListScreen extends React.Component {
-    static navigationOptions = {
-        title: 'List',
-    };
-
+export default class notesScreen extends React.Component {
     render() {
         return (
             <View>

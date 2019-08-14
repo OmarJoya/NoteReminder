@@ -1,14 +1,14 @@
 import React from 'react'
 import { createAppContainer, createBottomTabNavigator } from 'react-navigation'
 import Icon from 'react-native-vector-icons/FontAwesome';
-import ListScreen from '../screens/list/ListScreen';
-import CalendarScreen from '../screens/calendar/CalendarScreen';
-import ConfigScreen from '../screens/Config/ConfigScreen';
+import notesScreen from '../screens/notes/notesScreen';
+import calendarScreen from '../screens/calendar/calendarScreen';
+import configScreen from '../screens/config/configScreen';
 
-const TabNavigator = createBottomTabNavigator({
-    List: ListScreen,
-    Calendar: CalendarScreen,
-    Config: ConfigScreen
+const tabNavigator = createBottomTabNavigator({
+    Notes: notesScreen,
+    Calendar: calendarScreen,
+    Config: configScreen
 },
     {
         defaultNavigationOptions: ({ navigation }) => ({
@@ -17,8 +17,8 @@ const TabNavigator = createBottomTabNavigator({
                 let iconName: string = "";
 
                 switch (routeName) {
-                    case 'List':
-                        iconName = 'list';
+                    case 'Notes':
+                        iconName = 'sticky-note';
                         break
 
                     case 'Calendar':
@@ -44,4 +44,4 @@ const TabNavigator = createBottomTabNavigator({
     }
 );
 
-export default createAppContainer(TabNavigator)
+export default createAppContainer(tabNavigator)
