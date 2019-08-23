@@ -29,11 +29,25 @@ export const getNotes = () => {
         dispatch(fetchDataBegin())
         setTimeout(() => {
             const notes: Array<Note> = [{
-                title: "Note 1",
-                color: "yellow",
-                content: "This is a new note"
-            }];
+                title: "Note 1 Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+                color: "white",
+                content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+                date: new Date()
+            },
+            {
+                title: "Note 2",
+                color: "white",
+                content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+                date: new Date()
+            },
+            {
+                title: "Note 1 Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+                color: "white",
+                content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+                date: new Date()
+            }
+            ];
             dispatch(fetchDataSuccess(notes));
-        }, 2000);
+        }, 1000);
     }
 }
