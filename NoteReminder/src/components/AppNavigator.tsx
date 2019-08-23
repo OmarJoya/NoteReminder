@@ -30,7 +30,6 @@ const tabNavigator = createBottomTabNavigator({
                         iconName = 'cog';
                         break
                 }
-                // You can return any component that you like here!
                 return <Icon name={iconName} size={25} color={tintColor} />;
             },
         }),
